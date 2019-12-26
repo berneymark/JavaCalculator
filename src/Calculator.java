@@ -7,5 +7,11 @@ public class Calculator {
         return a - b;
     }
 
-    private int 
+    private int multiplication(int a, int b) {
+        return a * b;
+    }
+
+    private int division(int a, int b) {
+        return a / b;
+    }
 }
