@@ -3,21 +3,32 @@ import java.awt.*;
 
 public class GUI {
     private JFrame frame;
+    private JPanel numDisplay;
     private JPanel numPad;
 
     private void initGUI() {
         frame = new JFrame("Calculator");
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(400, 500);
         frame.getContentPane();
+        frame.setLayout(new BorderLayout());
+
+        numDisplay = new JPanel();
+        numDisplay.setLayout(new FlowLayout());
+        frame.add(numDisplay, BorderLayout.PAGE_START);
+        setNumDisplay();
 
         numPad = new JPanel();
         numPad.setLayout(new GridLayout(4, 3));
-        frame.add(numPad);
+        frame.add(numPad, BorderLayout.CENTER);
         setNumPad();
 
-        frame.setLayout(new FlowLayout());
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
+    }
+
+    private void setNumDisplay() {
+        JLabel display = new JLabel("0");
+        numDisplay.add(display);
     }
 
     private void setNumPad() {
