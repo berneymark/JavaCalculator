@@ -13,14 +13,14 @@ public class GUI {
         numPad = new JPanel();
         numPad.setLayout(new GridLayout(4, 3));
         frame.add(numPad);
-        numPad();
+        setNumPad();
 
         frame.setLayout(new FlowLayout());
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
 
-    private void numPad() {
+    private void setNumPad() {
         JButton nineBtn = new JButton("9");
         numPad.add(nineBtn);
 
