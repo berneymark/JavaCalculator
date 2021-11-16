@@ -6,7 +6,7 @@ public class GUI {
     private JPanel numDisplay;
     private JPanel numPad;
 
-    private void initGUI() {
+    private GUI() {
         frame = new JFrame("Calculator");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(400, 500);
@@ -64,7 +64,6 @@ public class GUI {
     }
 
     public static void main(String[] args) {
-        GUI g = new GUI();
-        g.initGUI();
+        GUI calc = new GUI();
     }
 }
