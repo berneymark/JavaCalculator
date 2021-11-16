@@ -16,6 +16,7 @@ public class GUI {
         numPad();
 
         frame.setLayout(new FlowLayout());
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
 
