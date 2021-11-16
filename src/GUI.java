@@ -1,29 +1,28 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class GUI {
-    private JFrame frame;
+public class GUI extends JFrame {
     private JPanel numDisplay;
     private JPanel numPad;
 
     private GUI() {
-        frame = new JFrame("Calculator");
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setSize(400, 500);
-        frame.getContentPane();
-        frame.setLayout(new BorderLayout());
+        setTitle("Calculator");
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setSize(400, 500);
+        getContentPane();
+        setLayout(new BorderLayout());
 
         numDisplay = new JPanel();
         numDisplay.setLayout(new FlowLayout());
-        frame.add(numDisplay, BorderLayout.PAGE_START);
+        add(numDisplay, BorderLayout.PAGE_START);
         setNumDisplay();
 
         numPad = new JPanel();
         numPad.setLayout(new GridLayout(4, 3));
-        frame.add(numPad, BorderLayout.CENTER);
+        add(numPad, BorderLayout.CENTER);
         setNumPad();
 
-        frame.setVisible(true);
+        setVisible(true);
     }
 
     private void setNumDisplay() {
